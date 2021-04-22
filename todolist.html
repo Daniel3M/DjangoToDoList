@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" 
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+    crossorigin="anonymous"/>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <title>To Do App</title>
+
+    <!--Add Css Here-->
+    <style>
+        body{
+            font-family: 'Open-Sans', sans-serif;
+            line-height: 1.6;
+        }
+        .add-todo-input{
+            outline: none;
+        }
+
+         
+    </style>
+</head>
+<body>
+    <div class="container m-5 p-2 rounded mx-auto bg-light shadow">
+        <div class="row  m-1 p-4">
+            <div class="col">
+                <div class="h1 text-primary text-center display-inline-block">
+                    <i class="fa fa-check bg-primary text-white p-2"></i>
+                    <u>MY Todo-s</u>
+                </div>
+            </div>
+        </div>
+ 
+        <!--Create Form-->
+        <form method="POST">
+            <div class="row m-1 p-3">
+                <div class="col col-11 mx-auto">
+                    <div class="row bg-white justife-content-center">
+                        <div class="col">
+                            <input type="text" name="task_name" maxlength="200"
+                            class="form-control form-control-lg border-0 add-todo-input bg-transparent" placeholder="Add New......">
+
+                        </div>
+                        <div class="col-auto m-2 px-2 d-flex align-items-center">
+                            <input title="Set a due date" type="date" name="due date">
+                        </div>
+                        <div class="col-auto px-0 mx-0 mr-2">
+                            <input type="submit" class="btn btn-primary" value="Add">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="p-2 mx-4 border-black-25 border-bottom"></div>
+        
+        <!--Add task table-->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button"
+                            data-toggle="dropdown">
+                            Priority
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">ALL</a>
+                                    <a class="dropdown-item" href="#">Low</a>
+                                    <a class="dropdown-item" href="#">Medium</a>
+                                    <a class="dropdown-item" href="#">High</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </th>
+                    <th scope="col">Due Date</th>
+                    <th scope="col">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button"
+                            data-toggle="dropdown">
+                            Status
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">ALL</a>
+                                    <a class="dropdown-item" href="#">Pending</a>
+                                    <a class="dropdown-item" href="#">Completed</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="rom">1</td>
+                    <td scope="rom">Watch Netflix</td>
+                    <td scope="rom">High</td>
+                    <td scope="rom">26Feb,2021</td>
+                    <td scope="rom"><a href="#">Mark as Complted</a></td>
+                    <td><a href="#"><i class="fa fa-edit text-primary"></i></a></td>
+                    <td><a href="#"><i class="fa fa-trash text-danger"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
